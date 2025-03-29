@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import Image from "next/image";
 // import ProfileButton from "./ProfileButton";
 
 const Navigation = () => {
@@ -16,10 +17,13 @@ const Navigation = () => {
       {/* Logo and Name */}
       <div className="flex items-center space-x-3">
         <Link href="/">
-          <img
-            src="./Logo.png"
+          <Image
+            src="/Logo.png"
             alt="Logo"
-            className="h-12 transition-shadow duration-300"
+            width={120}
+            height={40}
+            className="h-12 w-auto transition-shadow duration-300"
+            style={{ objectFit: 'contain' }}
           />
         </Link>
       </div>
@@ -61,14 +65,7 @@ const Navigation = () => {
           <Link
             key={index}
             href={link}
-            end // Ensures exact match for active state
-            className={({ isActive }) =>
-              `relative text-lg font-medium transition-colors duration-300 ${
-                isActive
-                  ? "text-green-500 font-bold"
-                  : "text-black hover:text-green-500"
-              }`
-            }
+            className="relative text-lg font-medium transition-colors duration-300 text-black hover:text-green-500"
           >
             <motion.div
               whileHover={{ scale: 1.1, color: "#2F6368" }}
@@ -97,10 +94,10 @@ const Navigation = () => {
         style={{
           transitionProperty: 'max-height',
           position: 'absolute',
-          top: '100%', // Positions the dropdown just below the nav bar
+          top: '100%',
           left: 0,
           right: 0,
-          zIndex: 40, // Ensures it appears above other content
+          zIndex: 40,
         }}
       >
         <motion.div
@@ -118,13 +115,8 @@ const Navigation = () => {
             <Link
               key={index}
               href={link}
-              end
-              className={({ isActive }) =>
-                `text-lg font-medium transition-colors duration-300 ${
-                  isActive ? "text-green-500 font-bold" : "text-black hover:text-green-500"
-                }`
-              }
-              onClick={() => setIsMenuOpen(false)} // Close the menu when a link is clicked
+              className="text-lg font-medium transition-colors duration-300 text-black hover:text-green-500"
+              onClick={() => setIsMenuOpen(false)}
             >
               {text}
             </Link>

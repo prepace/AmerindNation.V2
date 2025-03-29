@@ -23,8 +23,10 @@ export default function HeroSection({ title, description, ctaText, backgroundIma
           src={backgroundImage}
           alt="Background"
           fill
+          sizes="100vw"
           style={{ objectFit: 'cover' }}
           priority
+          quality={100}
         />
       </div>
 
