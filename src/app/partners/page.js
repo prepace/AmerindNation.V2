@@ -12,7 +12,7 @@ export default function Partners() {
           title="Empowering a Sustainable Future"
           description="Discover our mission, vision, and the team driving innovation in funding and planning."
           ctaText="Become a Partner"
-          backgroundImage="/partners.webp"
+          backgroundImage="/collab.webp"
         />
         <PartnersCardSection />
       </main>
