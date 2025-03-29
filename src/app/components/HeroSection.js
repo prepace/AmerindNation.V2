@@ -2,9 +2,9 @@
 
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
-import Image from 'next/image';  // Make sure this is imported
+import Image from 'next/image';
 
-export default function HeroSection({ title, description, ctaText, children }) {
+export default function HeroSection({ title, description, ctaText, backgroundImage, children }) {
   const [showModal, setShowModal] = useState(false);
 
   // Dynamically load external script for the booking form
@@ -20,11 +20,11 @@ export default function HeroSection({ title, description, ctaText, children }) {
       {/* Background Image */}
       <div className="absolute top-0 left-0 w-full h-full">
         <Image
-          src="/next.svg"  // Correct path to public folder
-          alt="Solar Farm"
-          layout="fill"
-          objectFit="cover"
-          priority  // Helps optimize the image for performance (e.g., LCP)
+          src={backgroundImage}
+          alt="Background"
+          fill
+          style={{ objectFit: 'cover' }}
+          priority
         />
       </div>
 
