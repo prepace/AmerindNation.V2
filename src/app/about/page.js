@@ -1,7 +1,7 @@
 import AboutCardSection from "../components/CardSection/AboutCardSection";
 import Navigation from "../components/Navigation/Navigation";
 import Footer from "../components/Footer/Footer";
-import HeroSection from "../components/HeroSection"; 
+import HeroSection from "../components/HeroSection";
 export default function About() {
   return (
     <>

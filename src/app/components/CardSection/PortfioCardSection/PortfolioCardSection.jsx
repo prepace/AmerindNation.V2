@@ -1,5 +1,7 @@
+"use client";
 import { useState } from "react";
 import { motion } from "framer-motion";
+
 
 const PortfolioCardSection = () => {
   const [expandedCard, setExpandedCard] = useState(null);
