@@ -13,7 +13,7 @@ const Navigation = () => {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-white bg-opacity-80 flex items-center justify-between px-6 py-4 z-50 shadow-md backdrop-blur-sm">
+    <nav className="sticky top-0 left-0 w-full bg-white bg-opacity-80 flex items-center justify-between px-6 py-4 z-50 shadow-md backdrop-blur-sm">
       {/* Logo and Name */}
       <div className="flex items-center space-x-3">
         <Link href="/">

@@ -5,7 +5,6 @@ import Navigation from "./components/Navigation/Navigation";
 export default function Home() {
   return (
     <>
-    <Navigation />
     <HeroSection
       title="Funding and Planning Specialists"
       description="Empowering sustainable energy projects with strategic funding and comprehensive planning solutions."

@@ -1,12 +1,9 @@
-import Navigation from "../components/Navigation/Navigation";
-import Footer from "../components/Footer/Footer";
-import SageContent from "../components/SageContent";
-import HeroSection from "../components/HeroSection";
+import SageContent from "../../components/SageContent";
+import HeroSection from "../../components/HeroSection";
 export default function portfolio() {
     return (
       <>
-        <Navigation />
-        <main className="pt-20">
+
           <HeroSection
           title="Sage Business Finance Renovation"
           description="At Amerind Sage, we tailor our services to the unique needs and size of your business. Whether you're a solo entrepreneur or a growing small business with a full-time team, our program is designed to optimize your financial operations, digital presence, and strategic planning. Our holistic approach ensures that every facet of your business is aligned for sustainable growth and success."
@@ -14,8 +11,7 @@ export default function portfolio() {
           backgroundImage="/collab.webp"
           />
         <SageContent/>
-        </main>
-        <Footer />
+        
       </>
     );
   }
