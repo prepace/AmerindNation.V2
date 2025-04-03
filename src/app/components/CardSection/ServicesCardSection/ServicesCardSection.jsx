@@ -68,7 +68,7 @@ const ServicesCardSection = () => {
               <motion.button
                 className="absolute top-4 right-4 bg-white bg-opacity-25 rounded-full p-2 focus:outline-none"
               >
-                <span className="text-white text-2xl font-bold">
+                <span className="text-black text-2xl font-bold">
                   {expandedCard === index ? "−" : "+"}
                 </span>
               </motion.button>

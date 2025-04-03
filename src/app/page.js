@@ -12,7 +12,7 @@ export default function Home() {
       backgroundImage='/solarFarm.jpeg' // ✅ Correct dynamic image reference
     />
     <HomeCardSection />
-    <Footer />
+   
     </>
   );
 }

@@ -36,7 +36,7 @@ const HomeCardSection = () => {
   ];
 
   return (
-    <div className="w-full bg-gray-50 py-4"> {/* Reduced py-6 to py-4 */}
+    <div className="w-full bg-gray-50 py-4">
       <div className="max-w-7xl mx-auto flex flex-wrap gap-6 justify-center">
         {cards.map((card, index) => (
           <motion.div
@@ -57,8 +57,8 @@ const HomeCardSection = () => {
                 href={card.link}
                 className="bg-white bg-opacity-25 rounded-full p-2 focus:outline-none"
               >
-                {/* Arrow Icon Instead of Plus Sign */}
-                <span className="text-white text-2xl font-bold">&#8594;</span> {/* Right Arrow */}
+                {/* Plus Icon Instead of Arrow */}
+                <span className="text-black text-2xl font-bold">+</span>
               </Link>
             </div>
             <p className="text-white text-opacity-90 text-sm leading-relaxed">
@@ -72,4 +72,3 @@ const HomeCardSection = () => {
 };
 
 export default HomeCardSection;
-
