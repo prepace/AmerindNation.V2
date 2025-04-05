@@ -10,10 +10,12 @@
     "clear": "rm -rf .next node_modules && npm install"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.49.4",
     "framer-motion": "^12.6.2",
     "next": "15.2.4",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "recharts": "^2.15.2"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

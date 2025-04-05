@@ -1,7 +1,7 @@
-import HeroSection from "@/app/components/HeroSection";
-import Footer from "@/app/components/Footer/Footer";
-import HomeCardSection from "./components/CardSection/HomeCardSection";
-import Navigation from "./components/Navigation/Navigation";
+import HeroSection from "@/components/HeroSection";
+import Footer from "@/components/Footer";
+import HomeCardSection from "../components/CardSection/HomeCardSection";
+import Navigation from "../components/Navigation/Navigation";
 export default function Home() {
   return (
     <>
@@ -12,7 +12,7 @@ export default function Home() {
       backgroundImage='/solarFarm.jpeg' // ✅ Correct dynamic image reference
     />
     <HomeCardSection />
-   
+
     </>
   );
 }

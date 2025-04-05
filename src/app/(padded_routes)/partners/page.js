@@ -1,5 +1,5 @@
-import PartnersCardSection from "../../components/CardSection/PartnersCardSection";
-import HeroSection from "../../components/HeroSection";
+import PartnersCardSection from "@/components/CardSection/PartnersCardSection";
+import HeroSection from "@/components/HeroSection";
 
 export default function Partners() {
   return (

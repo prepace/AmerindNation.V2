@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from 'react';
-import BookingModal from '../BookingModal';
+import BookingModal from './BookingModal';
 
 
 const servicesData = [

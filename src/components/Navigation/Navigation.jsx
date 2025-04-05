@@ -61,6 +61,7 @@ const Navigation = () => {
           { text: "Portfolio", link: "/portfolio" },
           { text: "Services", link: "/services" },
           { text: "Sage", link: "/sage" },
+          { text: "Dashboard", link: "/dashboard" },
         ].map(({ text, link }, index) => (
           <Link
             key={index}
@@ -111,6 +112,7 @@ const Navigation = () => {
             { text: "Portfolio", link: "/portfolio" },
             { text: "Services", link: "/services" },
             { text: "Sage", link: "/sage" },
+            { text: "Dashboard", link: "/dashboard" },
           ].map(({ text, link }, index) => (
             <Link
               key={index}

@@ -1,5 +1,5 @@
-import ServicesCardSection from "../../components/CardSection/ServicesCardSection";
-import HeroSection from "../../components/HeroSection";
+import ServicesCardSection from "@/components/CardSection/ServicesCardSection";
+import HeroSection from "@/components/HeroSection";
 export default function portfolio() {
     return (
       <>
