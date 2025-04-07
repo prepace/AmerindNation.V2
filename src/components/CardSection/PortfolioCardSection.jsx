@@ -126,7 +126,7 @@ const PortfolioCardSection = () => {
               whileTap={{ scale: 0.95 }}
             >
               <span className="text-2xl font-semibold">{card.title}</span>
-              <span className="text-3xl">{card.icon}</span>
+              <span className="text-3xl bg-white bg-opacity-25 rounded-full p-2">{card.icon}</span>
             </motion.div>
             {expandedCard === index && card.details}
           </motion.div>

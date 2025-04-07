@@ -89,7 +89,7 @@ const AboutCardSection = () => {
       ),
     },
     {
-      title: "Rural & Tribal Focus",
+      title: "Rural & Tribal",
       gradient: "bg-gradient-to-br from-[#33A9B5] to-[#24959E]",
       icon: "🪶",
       details: <div className="p-6 text-center">Content Coming Soon...</div>,
@@ -114,23 +114,19 @@ const AboutCardSection = () => {
             transition={{ delay: index * 0.2, duration: 0.5 }}
           >
             <div
-              className={`relative ${expandedCard !== null && expandedCard !== index ? "bg-gray-200" : card.gradient} rounded-t-xl p-6 shadow-lg flex flex-col cursor-pointer`}
+              className={`relative ${expandedCard !== null && expandedCard !== index ? "bg-gray-200" : card.gradient} rounded-t-xl p-6 shadow-lg flex justify-between cursor-pointer`}
               onClick={() => handleToggle(index)}
             >
-              {/* Icon */}
-              <div className="absolute top-4 left-4 bg-white bg-opacity-25 rounded-full p-2">
-                <span className="text-3xl text-white">{card.icon}</span>
-              </div>
-
+             
               {/* Title */}
-              <h3 className="text-2xl font-bold text-white text-center">
+              <h3 className="text-2xl font-bold text-white  left-0">
                 {card.title}
               </h3>
 
               {/* Toggle Button */}
-              <button className="absolute top-4 right-4 bg-white bg-opacity-25 rounded-full p-2 focus:outline-none">
+              <button className=" bg-white bg-opacity-25 rounded-full p-1 focus:outline-none">
                 <span className="text-black text-2xl font-bold">
-                  {expandedCard === index ? "−" : "+"}
+                 {card.icon}
                 </span>
               </button>
             </div>

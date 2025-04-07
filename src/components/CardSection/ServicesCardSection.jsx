@@ -11,25 +11,25 @@ const ServicesCardSection = () => {
 
   const cards = [
     {
-      title: "Funding Readiness",
+      title: "Funding",
       gradient: "bg-gradient-to-br from-[#55926F] to-[#467F5D]",
       icon: "💼",
       details: ["Team", "Skills", "Credentials"],
     },
     {
-      title: "Business Optimization",
+      title: "Optimization",
       gradient: "bg-gradient-to-br from-[#2F6368] to-[#264F51]",
       icon: "💼",
       details: ["Accounting and Auditing", "Digital Presence"],
     },
     {
-      title: "Strategic Planning",
+      title: "Strategy",
       gradient: "bg-gradient-to-br from-[#33A9B5] to-[#24959E]",
       icon: "📝",
       details: ["Direction (Mission, Vision, Values)", "Business Plan", "Pro Forma"],
     },
     {
-      title: "Technical Assistance",
+      title: "Assistance",
       gradient: "bg-gradient-to-br from-[#08FEB3] to-[#0FC99B]",
       icon: "🛠️",
       details: ["Applications", "Training", "Project Management"],
@@ -52,24 +52,21 @@ const ServicesCardSection = () => {
                 expandedCard !== null && expandedCard !== index
                   ? "bg-gray-200"
                   : card.gradient
-              } rounded-t-xl p-6 shadow-lg flex flex-col cursor-pointer`}
+              } rounded-t-xl p-6 shadow-lg flex justify-between cursor-pointer`}
               onClick={() => handleToggle(index)}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <div className="absolute top-4 left-4 bg-white bg-opacity-25 rounded-full p-2">
-                <span className="text-3xl text-white">{card.icon}</span>
-              </div>
 
-              <h3 className="text-lg font-bold text-white text-center">
+              <h3 className="text-2xl font-bold text-white  left-1 ">
                 {card.title}
               </h3>
 
               <motion.button
-                className="absolute top-4 right-4 bg-white bg-opacity-25 rounded-full p-2 focus:outline-none"
+                className=" top-4 right-4 bg-white bg-opacity-25 rounded-full p-1 focus:outline-none"
               >
-                <span className="text-black text-2xl font-bold">
-                  {expandedCard === index ? "−" : "+"}
+                <span className="text-black text-2xl ">
+                  {card.icon}
                 </span>
               </motion.button>
             </motion.div>

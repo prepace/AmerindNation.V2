@@ -75,9 +75,7 @@ const PartnersCardSection = () => {
               className={`relative ${expandedCard !== null && expandedCard !== index ? "bg-gray-200" : card.gradient} rounded-t-xl p-6 shadow-lg flex flex-col cursor-pointer`}
               onClick={() => handleToggle(index)}
             >
-              <div className="absolute top-4 left-4 bg-white bg-opacity-25 rounded-full p-2">
-                <span className="text-3xl text-white">{card.icon}</span>
-              </div>
+             
 
               <h3 className="text-2xl font-bold text-white text-center">
                 {card.title}
@@ -85,7 +83,7 @@ const PartnersCardSection = () => {
 
               <button className="absolute top-4 right-4 bg-white bg-opacity-25 rounded-full p-2 focus:outline-none">
                 <span className="text-white text-2xl font-bold">
-                  {expandedCard === index ? "−" : "+"}
+                  {card.icon}
                 </span>
               </button>
             </div>
