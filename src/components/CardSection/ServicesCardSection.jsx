@@ -13,7 +13,7 @@ const ServicesCardSection = () => {
     {
       title: "Funding",
       gradient: "bg-gradient-to-br from-[#55926F] to-[#467F5D]",
-      icon: "💼",
+      icon: "📈",
       details: ["Team", "Skills", "Credentials"],
     },
     {
