@@ -180,9 +180,9 @@ export const trackRecordStats = [
     detail: "Community Energy Connectors application network assembled across regions and disciplines.",
   },
   {
-    metric: "9",
+    metric: "12",
     label: "Tribal Nations",
-    detail: "Oklahoma Tribal Nations included in the anticipated USBR water technical-assistance project.",
+    detail: "Federally Recognized Tribes included in state and federal grant awards in 2026 alone.",
   },
 ];
 
