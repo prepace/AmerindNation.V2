@@ -26,15 +26,7 @@ const premierPartners = [
     type: "Nine-Tribe regional council and community partner",
     ogTitle: "Inter-Tribal Council of Northeast Oklahoma",
     note: "The Inter-Tribal Council of Northeast Oklahoma is a Miami, Oklahoma-based 501(c)(3) formed in 1967 to preserve Native cultural values, expand educational and economic opportunity, and support health, nutrition, employment, planning, and development across the nine Tribes of Northeast Oklahoma.",
-  },
-  {
-    name: "Yakamart",
-    type: "Yakama Nation enterprise and EV charging project site",
-    url: "https://yakamart.com/",
-    ogTitle: "Yakamart",
-    ogImage: "https://storage.googleapis.com/wzsitethumbnails/site-46742665/800x500.jpg",
-    note: "Yakamart, Inc. is an enterprise of the Confederated Tribes and Bands of the Yakama Nation and the grantee of record for the WAEVCP2 EV charging award supporting six public DC fast charging ports in Toppenish, Washington.",
-  },
+  }
 ];
 
 const anchorPartners = [
@@ -255,6 +247,14 @@ const researchedPartners = [
     url: "https://technologyideationllc.com/",
     ogTitle: "Technology Ideation LLC",
     note: "Veteran-owned advisory firm connecting technologies, agencies, universities, companies, nonprofits, and funders through ideation, collaboration, and solution-development networks.",
+  },
+  {
+    name: "Yakamart",
+    type: "Yakama Nation enterprise and EV charging project site",
+    url: "https://yakamart.com/",
+    ogTitle: "Yakamart",
+    ogImage: "https://storage.googleapis.com/wzsitethumbnails/site-46742665/800x500.jpg",
+    note: "Yakamart, Inc. is an enterprise of the Confederated Tribes and Bands of the Yakama Nation and the grantee of record for the WAEVCP2 EV charging award supporting six public DC fast charging ports in Toppenish, Washington.",
   },
 ];
 
