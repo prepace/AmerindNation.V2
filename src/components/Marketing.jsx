@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { contactHref, primaryCta } from "@/lib/siteContent";
+import { contactHref, primaryCta, trackRecordStats } from "@/lib/siteContent";
 
 export function CTAButton({ href = contactHref, children = primaryCta, variant = "primary" }) {
   const classes =
@@ -22,14 +22,14 @@ export function SectionHeader({ eyebrow, title, description, align = "left" }) {
   return (
     <div className={`max-w-3xl ${align === "center" ? "mx-auto text-center" : ""}`}>
       {eyebrow && (
-        <p className="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-[#9b6b3e]">
+        <p className="mono-eyebrow mb-3 text-xs font-bold uppercase tracking-[0.2em] text-[#9b6b3e]">
           {eyebrow}
         </p>
       )}
-      <h2 className="text-3xl font-semibold leading-tight text-[#18352d] md:text-4xl">
+      <h2 className="text-4xl font-semibold leading-tight text-[#18352d] md:text-5xl">
         {title}
       </h2>
-      {description && <p className="mt-4 text-base leading-7 text-[#56645f]">{description}</p>}
+      {description && <p className="mt-5 text-lg leading-8 text-[#56645f]">{description}</p>}
     </div>
   );
 }
@@ -58,11 +58,11 @@ export function PageHero({
       <div className="mx-auto flex min-h-[560px] max-w-7xl flex-col justify-center px-5 py-20 md:px-8">
         <div className="max-w-4xl">
           {eyebrow && (
-            <p className="mb-5 text-xs font-bold uppercase tracking-[0.2em] text-[#d4b476]">
+            <p className="mono-eyebrow mb-5 text-xs font-bold uppercase tracking-[0.2em] text-[#d4b476]">
               {eyebrow}
             </p>
           )}
-          <h1 className="text-4xl font-semibold leading-tight md:text-6xl">{title}</h1>
+          <h1 className="text-5xl font-semibold leading-[0.98] md:text-7xl">{title}</h1>
           <p className="mt-6 max-w-3xl text-lg leading-8 text-[#f1eadc] md:text-xl">
             {description}
           </p>
@@ -73,6 +73,55 @@ export function PageHero({
                 {secondaryText}
               </CTAButton>
             )}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function ProofHero() {
+  return (
+    <section className="relative isolate overflow-hidden bg-[#18352d] px-5 py-20 text-white md:px-8">
+      <div className="absolute inset-0 -z-10 opacity-20">
+        <div className="h-full w-full bg-[linear-gradient(90deg,rgba(212,180,118,.18)_1px,transparent_1px),linear-gradient(rgba(212,180,118,.16)_1px,transparent_1px)] bg-[size:44px_44px]" />
+      </div>
+      <div className="mx-auto max-w-7xl">
+        <p className="mono-eyebrow text-xs font-bold uppercase tracking-[0.24em] text-[#d4b476]">
+          Native-owned strategic funding and delivery
+        </p>
+        <div className="mt-8 grid gap-8 lg:grid-cols-[1fr_0.72fr] lg:items-end">
+          <div>
+            <h1 className="max-w-5xl text-6xl font-semibold leading-[0.9] md:text-8xl">
+              Proof before promise.
+            </h1>
+            <p className="mt-7 max-w-3xl text-xl leading-8 text-[#f1eadc] md:text-2xl">
+              Amerind Nation turns public funding opportunities into structured, buildable infrastructure projects for rural, Tribal, nonprofit, and public-benefit owners.
+            </p>
+            <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+              <CTAButton href="/contact" />
+              <CTAButton href="/portfolio" variant="secondary">
+                View Track Record
+              </CTAButton>
+            </div>
+          </div>
+          <div className="rounded-lg border border-white/20 bg-white/8 p-5 backdrop-blur-sm">
+            <p className="mono-eyebrow text-xs font-bold uppercase tracking-[0.2em] text-[#d4b476]">
+              Track Record
+            </p>
+            <div className="mt-5 grid gap-4 sm:grid-cols-2">
+              {trackRecordStats.map((stat) => (
+                <div key={stat.label} className="border-t border-white/20 pt-4">
+                  <div className="font-display text-5xl font-semibold leading-none text-white">
+                    {stat.metric}
+                  </div>
+                  <p className="mt-2 text-sm font-semibold uppercase tracking-[0.08em] text-[#d4b476]">
+                    {stat.label}
+                  </p>
+                  <p className="mt-2 text-sm leading-5 text-[#f1eadc]">{stat.detail}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
@@ -91,7 +140,7 @@ export function StatusBadge({ children }) {
 export function StatCard({ metric, label }) {
   return (
     <div className="border-l border-[#d9c49a] px-5 py-4 first:border-l-0">
-      <div className="text-2xl font-semibold text-[#18352d]">{metric}</div>
+      <div className="font-display text-3xl font-semibold text-[#18352d]">{metric}</div>
       <p className="mt-1 text-sm leading-5 text-[#56645f]">{label}</p>
     </div>
   );
@@ -138,7 +187,8 @@ export function ProcessStep({ step, index }) {
         {index + 1}
       </div>
       <div className="border-b border-[#e1dacb] pb-5">
-        <p className="text-lg font-semibold text-[#18352d]">{step}</p>
+        <p className="text-lg font-semibold text-[#18352d]">{step.title}</p>
+        <p className="mt-2 text-sm leading-6 text-[#56645f]">{step.deliverables}</p>
       </div>
     </div>
   );

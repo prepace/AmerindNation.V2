@@ -1,7 +1,6 @@
 export const primaryCta = "Request a Funding & Delivery Assessment";
 
-export const contactHref =
-  "mailto:pace@amerindnation.com?subject=Funding%20%26%20Delivery%20Assessment";
+export const contactHref = "/contact";
 
 export const services = [
   {
@@ -164,12 +163,68 @@ export const ecosystem = [
   },
 ];
 
+export const trackRecordStats = [
+  {
+    metric: "$900K",
+    label: "WA EV charging award",
+    detail: "Contract signed for six public DC fast charging ports in Toppenish, Washington.",
+  },
+  {
+    metric: "6",
+    label: "DCFC ports",
+    detail: "Level 3 public charging ports at a Yakama Nation enterprise site.",
+  },
+  {
+    metric: "53",
+    label: "Coalition partners",
+    detail: "Community Energy Connectors application network assembled across regions and disciplines.",
+  },
+  {
+    metric: "9",
+    label: "Tribal Nations",
+    detail: "Oklahoma Tribal Nations included in the anticipated USBR water technical-assistance project.",
+  },
+];
+
+export const projectLocations = [
+  {
+    place: "Toppenish, Washington",
+    project: "Yakamart WAEVCP2 EV Charging Award",
+    status: "Awarded / Contract Signed",
+  },
+  {
+    place: "Northeast Oklahoma",
+    project: "Inter-Tribal Council Water Technical Assistance",
+    status: "Highest Rated / Anticipated Award",
+  },
+  {
+    place: "National coalition",
+    project: "Community Energy Connectors",
+    status: "Submitted / Coalition Built",
+  },
+];
+
 export const processSteps = [
-  "Assess eligibility and project fit",
-  "Structure the funding and delivery plan",
-  "Build the application and partner package",
-  "Coordinate award, vendors, utilities, and implementation",
-  "Track compliance and long-term obligations",
+  {
+    title: "Assess eligibility and project fit",
+    deliverables: "Fit memo, eligibility notes, pursuit recommendation, initial risk flags.",
+  },
+  {
+    title: "Structure the funding and delivery plan",
+    deliverables: "Capital stack, ownership model, eligible-cost framework, partner roles.",
+  },
+  {
+    title: "Build the application and partner package",
+    deliverables: "Narrative, budget, host letters, partner table, attachments, submission QA.",
+  },
+  {
+    title: "Coordinate award, vendors, utilities, and implementation",
+    deliverables: "Award responses, utility coordination, procurement support, vendor workplan.",
+  },
+  {
+    title: "Track compliance and long-term obligations",
+    deliverables: "Reporting calendar, compliance checklist, closeout file, operating obligations.",
+  },
 ];
 
 export const disclaimer =

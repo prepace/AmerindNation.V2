@@ -36,11 +36,11 @@ export default function About() {
           <SectionHeader
             eyebrow="Company Story"
             title="Broad enough for public-benefit infrastructure. Deep enough for Tribal work."
-            description="Amerind is Native-owned and relationship-first, with deep experience in rural and Tribal development. That expertise is a major proof point, not a boundary around the company."
+            description="Amerind Nation is Native-owned and relationship-first, with deep experience in rural and Tribal development. That expertise is a major proof point, not a boundary around the company."
           />
           <div className="space-y-6 text-base leading-8 text-[#56645f]">
             <p>
-              Amerind supports rural, Tribal, nonprofit, public-benefit, and infrastructure projects where opportunity, eligibility, partner roles, and delivery capacity must be aligned before a project can move.
+              Amerind Nation supports rural, Tribal, nonprofit, public-benefit, and infrastructure projects where opportunity, eligibility, partner roles, and delivery capacity must be aligned before a project can move.
             </p>
             <p>
               The firm works across funding strategy, application development, capital stack planning, owner representation, implementation planning, and compliance-aware delivery. The goal is not just to submit. The goal is to help owners carry a fundable project into execution.

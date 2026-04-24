@@ -377,7 +377,7 @@ export default function Partners() {
       <PageHero
         eyebrow="Partners"
         title="Strong projects need aligned owners, technical teams, funders, and delivery partners."
-        description="Amerind coordinates with the parties that make infrastructure projects real: engineers, EPCs, utilities, public agencies, Tribal enterprises, nonprofits, vendors, and funding partners."
+        description="Amerind Nation coordinates with the parties that make infrastructure projects real: engineers, EPCs, utilities, public agencies, Tribal enterprises, nonprofits, vendors, and funding partners."
       />
       <section className="px-5 py-20 md:px-8">
         <div className="mx-auto max-w-7xl">

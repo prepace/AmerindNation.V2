@@ -11,7 +11,7 @@ export default function DashboardPage() {
       <PageHero
         eyebrow="Dashboard"
         title="Client dashboard access for active projects."
-        description="Amerind uses structured project systems to organize funding workflows, project dashboards, document packets, compliance calendars, and delivery intelligence."
+        description="Amerind Nation uses structured project systems to organize funding workflows, project dashboards, document packets, compliance calendars, and delivery intelligence."
       />
       <section className="px-5 py-20 md:px-8">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.85fr_1.15fr]">

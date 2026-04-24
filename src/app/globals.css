@@ -33,3 +33,37 @@ body {
 a {
   text-underline-offset: 3px;
 }
+
+h1,
+h2,
+h3,
+.font-display {
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.mono-eyebrow {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+}
+
+:focus-visible {
+  outline: 3px solid #b87943;
+  outline-offset: 4px;
+}
+
+@media print {
+  nav,
+  footer,
+  a[href="/contact"],
+  a[href^="mailto:"] {
+    display: none !important;
+  }
+
+  body {
+    background: #ffffff;
+    color: #000000;
+  }
+
+  section {
+    break-inside: avoid;
+  }
+}

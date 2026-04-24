@@ -15,7 +15,7 @@ const Navigation = () => {
     { text: "Sage", link: "/sage" },
     { text: "About", link: "/about" },
     { text: "Partners", link: "/partners" },
-    { text: "Dashboard", link: "/dashboard" },
+    { text: "Client Login", link: "/dashboard" },
   ];
 
   return (

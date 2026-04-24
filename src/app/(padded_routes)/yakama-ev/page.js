@@ -34,7 +34,7 @@ export default function YakamaEv() {
           <SectionHeader
             eyebrow="Featured Case Study"
             title="From sourced opportunity to negotiated award and delivery path."
-            description="Amerind sourced and wrote the application, negotiated the award, and is positioned to deliver the project end-to-end from design through commissioning and the 5-year operations and maintenance period."
+            description="Amerind Nation sourced and wrote the application, negotiated the award, and is positioned to deliver the project end-to-end from design through commissioning and the 5-year operations and maintenance period."
           />
           <div className="space-y-4">
             {facts.map(([label, value]) => (

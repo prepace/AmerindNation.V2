@@ -40,7 +40,7 @@ export default function EvChargingProgram() {
       <PageHero
         eyebrow="Program Offering"
         title="Turnkey EV charging funding and delivery support."
-        description="Amerind helps eligible owners evaluate EV charging funding programs, build application packages, coordinate utilities and vendors, and carry funded sites toward activation."
+        description="Amerind Nation helps eligible owners evaluate EV charging funding programs, build application packages, coordinate utilities and vendors, and carry funded sites toward activation."
         secondaryHref="/yakama-ev"
         secondaryText="View Yakamart Case Study"
       />
@@ -49,7 +49,7 @@ export default function EvChargingProgram() {
           <SectionHeader
             eyebrow="Scope"
             title="Reusable for NEVI, CALeVIP-style, utility, state, and corridor charging programs."
-            description="The exact rules change by program. Amerind keeps the engagement focused on fit, application quality, delivery readiness, and owner representation."
+            description="The exact rules change by program. Amerind Nation keeps the engagement focused on fit, application quality, delivery readiness, and owner representation."
           />
           <div className="grid gap-4 sm:grid-cols-2">
             {support.map((item) => (
@@ -85,7 +85,7 @@ export default function EvChargingProgram() {
             <SectionHeader
               eyebrow="What You'll Need"
               title="A practical checklist for intake."
-              description="A complete intake helps Amerind determine whether a site can be structured into a competitive funding and delivery plan."
+              description="A complete intake helps Amerind Nation determine whether a site can be structured into a competitive funding and delivery plan."
             />
             <div className="mt-8 space-y-3">
               {checklist.map((item) => (
@@ -98,7 +98,7 @@ export default function EvChargingProgram() {
           <div className="rounded-lg border border-[#d9c49a] bg-[#18352d] p-8 text-white">
             <h2 className="text-2xl font-semibold">Scoped engagement windows</h2>
             <p className="mt-4 text-sm leading-7 text-[#f1eadc]">
-              EV charging program support is typically scoped by window: assessment, application package, award negotiation, and delivery/owner representation. Pricing depends on program complexity, deadlines, site readiness, partner documentation, and whether Amerind is supporting only the application or the full delivery path.
+              EV charging program support is typically scoped by window: assessment, application package, award negotiation, and delivery/owner representation. Pricing depends on program complexity, deadlines, site readiness, partner documentation, and whether Amerind Nation is supporting only the application or the full delivery path.
             </p>
             <p className="mt-5 text-sm leading-7 text-[#f1eadc]">{disclaimer}</p>
             <div className="mt-8">

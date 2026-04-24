@@ -28,7 +28,7 @@ export default function Portfolio() {
           </div>
         </div>
       </section>
-      <FinalCTA text="Have a funding opportunity, award notice, or site that needs to become a real project? Amerind can help assess the path." />
+      <FinalCTA text="Have a funding opportunity, award notice, or site that needs to become a real project? Amerind Nation can help assess the path." />
     </>
   );
 }
