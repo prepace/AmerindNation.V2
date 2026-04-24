@@ -1,41 +1,47 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "framer-motion";
 import { useState } from "react";
 import Image from "next/image";
-// import ProfileButton from "./ProfileButton";
+import { primaryCta } from "@/lib/siteContent";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  // Toggle hamburger menu
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const links = [
+    { text: "Services", link: "/services" },
+    { text: "Sectors", link: "/sectors" },
+    { text: "Portfolio", link: "/portfolio" },
+    { text: "Sage", link: "/sage" },
+    { text: "About", link: "/about" },
+    { text: "Partners", link: "/partners" },
+    { text: "Dashboard", link: "/dashboard" },
+  ];
 
   return (
-    <nav className="sticky top-0 left-0 w-full bg-white bg-opacity-80 flex items-center justify-between px-6 py-4 z-50 shadow-md backdrop-blur-sm">
-      {/* Logo and Name */}
+    <nav className="sticky top-0 left-0 z-50 flex w-full items-center justify-between border-b border-[#e1dacb] bg-[#f8f4ea]/92 px-5 py-3 shadow-sm backdrop-blur-md md:px-8">
       <div className="flex items-center space-x-3">
-        <Link href="/">
+        <Link href="/" aria-label="Amerind Nation home">
           <Image
             src="/Logo.png"
-            alt="Logo"
+            alt="Amerind Nation"
             width={120}
             height={40}
-            className="h-12 w-auto transition-shadow duration-300"
+            className="h-11 w-auto transition-shadow duration-300"
             style={{ objectFit: 'contain' }}
           />
         </Link>
       </div>
 
-      {/* Hamburger Icon for Mobile */}
       <button
-        className="lg:hidden flex items-center"
+        className="flex h-11 w-11 items-center justify-center rounded-md border border-[#d8ccba] text-[#18352d] lg:hidden"
         onClick={toggleMenu}
+        aria-label="Toggle menu"
+        aria-expanded={isMenuOpen}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="h-6 w-6 text-black"
+          className="h-6 w-6"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -49,49 +55,26 @@ const Navigation = () => {
         </svg>
       </button>
 
-      {/* Navigation Links (only for desktop) */}
-      <motion.div
-        className="flex items-center space-x-8 lg:flex hidden"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5, ease: "easeInOut" }}
-      >
-        {[{ text: "About Us", link: "/about" },
-          { text: "Partners", link: "/partners" },
-          { text: "Portfolio", link: "/portfolio" },
-          { text: "Services", link: "/services" },
-          { text: "Sage", link: "/sage" },
-          { text: "Dashboard", link: "/dashboard" },
-        ].map(({ text, link }, index) => (
+      <div className="hidden items-center gap-6 lg:flex">
+        {links.map(({ text, link }) => (
           <Link
-            key={index}
+            key={link}
             href={link}
-            className="relative text-lg font-medium transition-colors duration-300 text-black hover:text-green-500"
+            className="text-sm font-semibold text-[#263f36] transition-colors hover:text-[#8a572f]"
           >
-            <motion.div
-              whileHover={{ scale: 1.1, color: "#2F6368" }}
-              whileTap={{ scale: 0.95 }}
-            >
-              {text}
-              <motion.div
-                className="absolute bottom-[-2px] left-0 w-0 h-[2px] bg-green-500"
-                initial={{ width: "0%" }}
-                whileHover={{ width: "100%" }}
-                transition={{ duration: 0.3 }}
-              ></motion.div>
-            </motion.div>
+            {text}
           </Link>
         ))}
+        <Link
+          href="/contact"
+          className="inline-flex min-h-10 items-center rounded-md bg-[#b87943] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#966134]"
+        >
+          {primaryCta}
+        </Link>
+      </div>
 
-        {/* Profile Button */}
-        <div>
-          {/* <ProfileButton /> commented out for now */}
-        </div>
-      </motion.div>
-
-      {/* Dropdown Menu for Mobile */}
       <div
-        className={`lg:hidden transition-all duration-500 ease-in-out ${isMenuOpen ? 'max-h-60 overflow-auto' : 'max-h-0 overflow-hidden'}`}
+        className={`lg:hidden transition-all duration-500 ease-in-out ${isMenuOpen ? 'max-h-[520px] overflow-auto' : 'max-h-0 overflow-hidden'}`}
         style={{
           transitionProperty: 'max-height',
           position: 'absolute',
@@ -101,29 +84,25 @@ const Navigation = () => {
           zIndex: 40,
         }}
       >
-        <motion.div
-          className="flex flex-col items-start space-y-4 py-4 px-6 bg-white shadow-md"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.3 }}
-        >
-          {[{ text: "About Us", link: "/about" },
-            { text: "Partners", link: "/partners" },
-            { text: "Portfolio", link: "/portfolio" },
-            { text: "Services", link: "/services" },
-            { text: "Sage", link: "/sage" },
-            { text: "Dashboard", link: "/dashboard" },
-          ].map(({ text, link }, index) => (
+        <div className="flex flex-col items-start gap-1 border-b border-[#e1dacb] bg-[#f8f4ea] px-5 py-4 shadow-md">
+          {links.map(({ text, link }) => (
             <Link
-              key={index}
+              key={link}
               href={link}
-              className="text-lg font-medium transition-colors duration-300 text-black hover:text-green-500"
+              className="w-full rounded-md px-3 py-3 text-base font-semibold text-[#263f36] transition-colors hover:bg-[#efe5d4]"
               onClick={() => setIsMenuOpen(false)}
             >
               {text}
             </Link>
           ))}
-        </motion.div>
+          <Link
+            href="/contact"
+            className="mt-2 inline-flex min-h-11 w-full items-center justify-center rounded-md bg-[#b87943] px-4 py-2 text-sm font-semibold text-white"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            {primaryCta}
+          </Link>
+        </div>
       </div>
     </nav>
   );

@@ -9,7 +9,6 @@ export default function HeroSection({ title, description, ctaText, backgroundIma
 
   return (
     <div className="w-full h-[70vh] relative">
-      {/* Background Image: TODO: ADD Background image dynamically */}
       <div className="absolute top-0 left-0 w-full h-full bg-no-repeat bg-center bg-cover bg-[url('/solarFarm.jpeg')]">
         {/* Content */}
         <motion.div

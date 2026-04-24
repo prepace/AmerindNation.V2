@@ -1,50 +1,40 @@
-// app/dashboard/page.js
+import { CTAButton, PageHero, SectionHeader } from "@/components/Marketing";
 
-'use client';
-
-import React, { useState } from 'react';
-import Dashboard from '@/components/Dashboard';
-
-const TEMP_PASSWORD = 'Chickasha';
+export const metadata = {
+  title: "Dashboard",
+  description: "Amerind Nation client dashboard access for funding workflows and project delivery.",
+};
 
 export default function DashboardPage() {
-  const [password, setPassword] = useState('');
-  const [authenticated, setAuthenticated] = useState(false);
-  const [error, setError] = useState('');
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (password === TEMP_PASSWORD) {
-      setAuthenticated(true);
-      setError('');
-    } else {
-      setError('Incorrect password, please try again.');
-    }
-  };
-
-  if (!authenticated) {
-    return (
-      <div className="flex flex-col items-center justify-center h-screen bg-gray-100">
-        <form onSubmit={handleSubmit} className="p-8 bg-white rounded shadow-md">
-          <h2 className="text-xl font-bold mb-4">Enter Password</h2>
-          <input
-            type="password"
-            placeholder="Password"
-            className="border px-4 py-2 mb-4 w-full"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
+  return (
+    <>
+      <PageHero
+        eyebrow="Dashboard"
+        title="Client dashboard access for active projects."
+        description="Amerind uses structured project systems to organize funding workflows, project dashboards, document packets, compliance calendars, and delivery intelligence."
+      />
+      <section className="px-5 py-20 md:px-8">
+        <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.85fr_1.15fr]">
+          <SectionHeader
+            eyebrow="Client Access"
+            title="A private workspace for organized delivery."
+            description="Dashboard access is reserved for active engagements and approved collaborators. Project workspaces are organized around funding milestones, document requests, reporting dates, partner tasks, and delivery records."
           />
-          {error && <p className="text-red-600 mb-4">{error}</p>}
-          <button
-            type="submit"
-            className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
-          >
-            Submit
-          </button>
-        </form>
-      </div>
-    );
-  }
-
-  return <Dashboard />;
+          <div className="rounded-lg border border-[#e1dacb] bg-white p-6">
+            <h2 className="text-2xl font-semibold text-[#18352d]">Dashboard areas</h2>
+            <div className="mt-6 grid gap-3 sm:grid-cols-2">
+              {["Funding workflows", "Document packets", "Project dashboards", "Compliance calendars", "Partner records", "Delivery memory"].map((item) => (
+                <div key={item} className="rounded-md bg-[#fbf7ed] px-4 py-3 text-sm font-semibold text-[#18352d]">
+                  {item}
+                </div>
+              ))}
+            </div>
+            <div className="mt-8">
+              <CTAButton href="/contact">Request Access Discussion</CTAButton>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  );
 }
